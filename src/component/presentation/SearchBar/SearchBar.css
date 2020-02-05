@@ -1,0 +1,9 @@
+.searchBarContainer{
+    width: 100%;
+    text-align:center;
+}
+
+.searchBar{
+    width: 80%;
+    margin:auto;
+}

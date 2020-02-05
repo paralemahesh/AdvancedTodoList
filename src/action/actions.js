@@ -16,3 +16,7 @@ export const addNewTodoAction = (newTodo) => ({
 export const toggleTodoAction = (id) => ({
     type: 'TOGGLE_TODO', data: { id }
 });
+
+export const searchTodosAction = (text) => ({
+    type: 'SEARCH_TODOS', data: { text }
+});

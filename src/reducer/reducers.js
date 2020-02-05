@@ -40,9 +40,19 @@ const visibilityFilter = (state = getVisibilityFilter(), action) => {
     return filter;
 }
 
+const filterCriterias = (state = {}, action) => {
+    console.log(action);
+    switch(action.type){
+        case 'SEARCH_TODOS': return { searchText: action.data.text };
+        
+        default: return state;
+    }
+}
+
 const reducers = combineReducers({
         todos,
-        visibilityFilter
+        visibilityFilter,
+        filterCriterias
     }
 );
 
