@@ -26,7 +26,7 @@ const todos = (state = getTodos(), action) => {
     return updatedState;
 }
 
-const visibilityFilter = (state = getVisibilityFilter(), action) => {
+const visibilityFilter = (state = "ALL_TODOS", action) => {
     let filter; 
     switch(action.type) {
         case 'COMPLETED_TODOS': 
@@ -36,13 +36,13 @@ const visibilityFilter = (state = getVisibilityFilter(), action) => {
         default: filter = state; break;
     }
 
-    storeData('visibilityFilter', filter);
+    // storeData('visibilityFilter', filter);
     return filter;
 }
 
-const searchText = (state = {}, action) => {
+const searchText = (state = '', action) => {
     switch(action.type){
-        case 'SEARCH_TODOS': return { searchText: action.data.text };
+        case 'SEARCH_TODOS': return action.data.text;
         default: return state;
     }
 }

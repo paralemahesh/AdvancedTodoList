@@ -14,8 +14,8 @@ const getVisibleTodos = (todos, filterCriterias) => {
     let filteredTodos = condition == null ? todos : todos.filter(condition);
     let visibleTodos = filterCriterias.searchText ? filteredTodos.filter((item)=>item.task.includes(filterCriterias.searchText)) : filteredTodos;
 
-    console.log(filterCriterias.searchText);
-    console.log(visibleTodos);
+    console.log('filterCriterias', filterCriterias);
+    console.log('visibleTodos', visibleTodos);
 
     return visibleTodos;
 }

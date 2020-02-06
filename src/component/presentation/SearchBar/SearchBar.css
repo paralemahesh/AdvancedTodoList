@@ -6,4 +6,5 @@
 .searchBar{
     width: 80%;
     margin:auto;
+    display: inline-block;
 }
