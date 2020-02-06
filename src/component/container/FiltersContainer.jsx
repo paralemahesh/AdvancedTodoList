@@ -6,7 +6,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    return { visibleFilter: state.visibilityFilter };
+    return { visibleFilter: state.filterCriterias.visibilityFilter };
 }
 
 const FiltersContainer = connect(

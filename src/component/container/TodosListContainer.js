@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import TodosList from '../presentation/TodosList.jsx';
 import { toggleTodoAction } from '../../action/actions.js'
 
-const getVisibleTodos = (todos, visibilityFilter, filterCriterias) => {
+const getVisibleTodos = (todos, filterCriterias) => {
     let condition;
-    switch(visibilityFilter){
+    switch(filterCriterias.visibilityFilter){
         case 'COMPLETED_TODOS': condition = (item) => item.isComplete; break;
         case 'INCOMPLETE_TODOS': condition = (item) => !item.isComplete; break;
 
@@ -21,7 +21,7 @@ const getVisibleTodos = (todos, visibilityFilter, filterCriterias) => {
 }
 
 const mapStateToProps = state => {
-    return {todos: getVisibleTodos(state.todos, state.visibilityFilter, state.filterCriterias)};
+    return {todos: getVisibleTodos(state.todos, state.filterCriterias)};
 };
 
 const mapDispatchToProps = dispatch => ({
