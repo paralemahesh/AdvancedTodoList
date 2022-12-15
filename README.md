@@ -1,4 +1,4 @@
-A basic single page web application to manage todo list created using react and redux.
+A complex single page web application to manage todo list created using react and redux.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
